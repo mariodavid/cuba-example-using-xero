@@ -1,9 +1,7 @@
 package de.diedavids.cuba.ceux.service;
 
-import com.haulmont.cuba.core.app.DataManagerBean;
 import com.haulmont.cuba.core.global.DataManager;
 import com.haulmont.cuba.core.global.Metadata;
-import com.haulmont.cuba.core.global.Resources;
 import com.xero.api.XeroClient;
 import de.diedavids.cuba.ceux.entity.Invoice;
 import de.diedavids.cuba.xero.core.XeroClientFactory;
