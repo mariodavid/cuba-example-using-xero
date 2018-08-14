@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <screen id="ceux$Invoice.browse"
+            template="de/diedavids/cuba/ceux/web/invoice/invoice-browse.xml"/>
+    <screen id="ceux$Invoice.edit"
+            template="de/diedavids/cuba/ceux/web/invoice/invoice-edit.xml"/>
+</screen-config>

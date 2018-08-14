@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="de.diedavids.cuba.ceux.web.invoice.InvoiceEdit"
+        datasource="invoiceDs"
+        focusComponent="fieldGroup"
+        messagesPack="de.diedavids.cuba.ceux.web.invoice">
+    <dsContext>
+        <datasource id="invoiceDs"
+                    class="de.diedavids.cuba.ceux.entity.Invoice"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="invoiceDs">
+            <column width="250px">
+                <field property="invoiceDate"/>
+                <field property="invoiceNumber"/>
+                <field property="amountDue"/>
+                <field property="amountPaid"/>
+                <field property="total"/>
+                <field property="totalTax"/>
+                <field property="subTotal"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

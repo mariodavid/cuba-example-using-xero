@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="de.diedavids.cuba.ceux.web.invoice.InvoiceBrowse"
+        focusComponent="invoicesTable"
+        lookupComponent="invoicesTable"
+        messagesPack="de.diedavids.cuba.ceux.web.invoice">
+    <dsContext>
+        <groupDatasource id="invoicesDs"
+                         class="de.diedavids.cuba.ceux.entity.Invoice"
+                         view="_local">
+            <query>
+                <![CDATA[select e from ceux$Invoice e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="invoicesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="invoicesTable"
+                datasource="invoicesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="invoicesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="xeroAction"
+                        caption="Download Invoices from Xero"
+                        icon="font-icon:DOWNLOAD"
+                        invoke="xeroActionHandler"/>
+            </actions>
+            <columns>
+                <column id="invoiceDate"/>
+                <column id="invoiceNumber"/>
+                <column id="amountDue"/>
+                <column id="amountPaid"/>
+                <column id="total"/>
+                <column id="totalTax"/>
+                <column id="subTotal"/>
+            </columns>
+            <rows datasource="invoicesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="invoicesTable.create"/>
+                <button id="editBtn"
+                        action="invoicesTable.edit"/>
+                <button id="removeBtn"
+                        action="invoicesTable.remove"/>
+                <button id="xeroBtn"
+                        action="invoicesTable.xeroAction"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
