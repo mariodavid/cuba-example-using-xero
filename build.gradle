@@ -51,7 +51,7 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("de.diedavids.cuba.xero:xero-global:0.1.0")
+    appComponent("de.diedavids.cuba.xero:xero-global:0.1.1")
 
 }
 
