@@ -2,11 +2,9 @@
 CUBA example that shows how to use the Xero app component.
 
 
-With everything configured in order to connect to the Xero API, the full SDK of Xero can be used in order to interact with different
-aspects of the API.
+With everything configured in order to connect to the Xero API, the full SDK of Xero can be used in order to interact with different aspects of the API.
 
-Here's an example that shows how to retrieve all invoices from Xero. After that the Invoices are transformed to persistent entities
-of the application in order to store those information.
+Here's an example that shows how to retrieve all invoices from Xero. After that the Invoices are transformed to persistent entities of the application in order to store those information.
 
 
 ```
@@ -68,5 +66,7 @@ public class XeroInvoiceServiceBean implements XeroInvoiceService {
 
 The result looks like this in the UI after a successful download:
 
- 
 ![Xero invoice download](https://github.com/mariodavid/cuba-example-using-xero/blob/master/img/1-xero-invoices-download.png)
+
+### Configure the integration
+In order to configure the connection to Xero correctly, this youtube video shows how to setup the integration: [CUBA Xero Java SDK Integration - configuration](https://youtu.be/A5HZM-wlOJA)
